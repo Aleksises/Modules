@@ -61,9 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
-    <AndroidResource Include="Resources\Resource.designer.cs">
-      <Generator>MSBuild.UpdateGeneratedFiles</Generator>
-    </AndroidResource>
+    <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
