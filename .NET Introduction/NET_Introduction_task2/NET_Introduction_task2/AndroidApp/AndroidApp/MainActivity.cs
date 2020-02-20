@@ -4,6 +4,7 @@ using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
 using AlertDialog = Android.App.AlertDialog;
+using Shared;
 
 namespace AndroidApp
 {
@@ -24,7 +25,7 @@ namespace AndroidApp
             {
                 if (textEdit.Text.Length > 0)
                 {
-                    var greetings = string.Format("Hello, {0}", textEdit.Text);
+                    var greetings = GreetingsService.GetGreetingsString(textEdit.Text);
                     new AlertDialog.Builder(this)
                     .SetTitle("Greetings")
                     .SetMessage(greetings)

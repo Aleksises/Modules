@@ -2,11 +2,11 @@
 
 namespace Shared
 {
-    public class GreetingsService
+    public static class GreetingsService
     {
-        public string GetGreetingsString(string username)
+        public static string GetGreetingsString(string username)
         {
-            return string.Format("{0}, Hello, {1}", DateTime.Now, username);
+            return string.Format("{0} Hello, {1}", DateTime.Now, username);
         }
     }
 }

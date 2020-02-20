@@ -9,9 +9,8 @@ namespace NETCoreApp
         {
             if (args.Length > 0)
             {
-                var service = new GreetingsService();
-                var greetingsString = service.GetGreetingsString(args[0]);
-                Console.WriteLine(greetingsString);
+                var greetings = GreetingsService.GetGreetingsString(args[0]);
+                Console.WriteLine(greetings);
             }
             else
             {

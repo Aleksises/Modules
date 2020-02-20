@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shared;
+using System;
 using System.Windows.Forms;
 
 namespace WinFormsApp
@@ -14,7 +15,7 @@ namespace WinFormsApp
         {
             if (textBox1.TextLength > 0)
             {
-                var greetings = string.Format("Hello, {0}", textBox1.Text);
+                var greetings = GreetingsService.GetGreetingsString(textBox1.Text);
                 MessageBox.Show(greetings, "Greetings", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
