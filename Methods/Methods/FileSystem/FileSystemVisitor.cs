@@ -9,13 +9,6 @@ namespace Methods.FileSystem
 {
     public class FileSystemVisitor
     {
-        //private class CurrentAction
-        //{
-        //    public ActionType Action { get; set; }
-
-        //    public static CurrentAction ContinueSearch => new CurrentAction { Action = ActionType.ContinueSearch };
-        //}
-
         private readonly DirectoryInfo _startDirectory;
         private readonly Predicate<FileSystemInfo> _filter;
         private readonly IFileSystemProcessingStrategy _fileSystemProcessingStrategy;
