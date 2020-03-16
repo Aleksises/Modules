@@ -3,16 +3,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>Northwind.1.0</Name>
+    <Name>Northwind.1.3</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{167e6f30-cfa1-43e6-bd19-034bac4e5afe}</ProjectGuid>
+    <ProjectGuid>{e0e63b73-4a65-44f5-8215-c7534041baa8}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
-    <RootNamespace>Northwind.1.0</RootNamespace>
-    <AssemblyName>Northwind.1.0</AssemblyName>
+    <RootNamespace>Northwind.1.3</RootNamespace>
+    <AssemblyName>Northwind.1.3</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
@@ -60,6 +60,8 @@
     <Folder Include="dbo\Tables\" />
     <Folder Include="dbo\Views\" />
     <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\Deploy" />
+    <Folder Include="dbo\Deploy\PostDeploy" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Employees.sql" />
@@ -75,6 +77,7 @@
     <Build Include="dbo\Tables\Region.sql" />
     <Build Include="dbo\Tables\Territories.sql" />
     <Build Include="dbo\Tables\EmployeeTerritories.sql" />
+    <Build Include="dbo\Tables\CreditCards.sql" />
     <Build Include="dbo\Views\Customer and Suppliers by City.sql" />
     <Build Include="dbo\Views\Alphabetical list of products.sql" />
     <Build Include="dbo\Views\Current Product List.sql" />
@@ -100,6 +103,15 @@
     <Build Include="dbo\Stored Procedures\SalesByCategory.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Northwind.1.0.publish.xml" />
+    <RefactorLog Include="Northwind.1.3.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="dbo\Deploy\PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dbo\Deploy\PostDeploy\Categories_Insert_Data.sql" />
+    <None Include="dbo\Deploy\PostDeploy\Products_Insert_Data.sql" />
+    <None Include="dbo\Deploy\PostDeploy\Suppliers_Insert_Data.sql" />
+    <None Include="Northwind.1.3.publish.xml" />
   </ItemGroup>
 </Project>
