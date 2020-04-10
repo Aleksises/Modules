@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ApplicationDemo": {
+      "commandName": "Project",
+      "commandLineArgs": "-u \"http://gamebomb.ru/\" -d \"E:\\Test\""
+    }
+  }
+}
