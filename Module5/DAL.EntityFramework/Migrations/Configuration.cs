@@ -14,10 +14,16 @@
 
         protected override void Seed(DAL.EntityFramework.NorthwindContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            context.Categories.AddOrUpdate(c => c.CategoryName,
+                new Category { CategoryName = "Italian food" },
+                new Category { CategoryName = "Best snacks" });
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
-            //  to avoid creating duplicate seed data.
+            context.Regions.AddOrUpdate(r => r.RegionID,
+                new Region { RegionDescription = "Gomel", RegionID = 5 });
+
+            context.Territories.AddOrUpdate(t => t.TerritoryID,
+                new Territory { TerritoryID = "3330912", TerritoryDescription = "The Zavod", RegionID = 5 },
+                new Territory { TerritoryID = "9120333", TerritoryDescription = "GSU", RegionID = 5 });
         }
     }
 }
