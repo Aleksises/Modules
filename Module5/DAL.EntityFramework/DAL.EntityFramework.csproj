@@ -54,9 +54,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Category.cs" />
+    <Compile Include="CreditCard.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerDemographic.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="Migrations\202004100225247_Ver_1.cs" />
+    <Compile Include="Migrations\202004100225247_Ver_1.designer.cs">
+      <DependentUpon>202004100225247_Ver_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004100241585_Ver_1.1.cs" />
+    <Compile Include="Migrations\202004100241585_Ver_1.1.designer.cs">
+      <DependentUpon>202004100241585_Ver_1.1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004100244583_Ver_1.3.cs" />
+    <Compile Include="Migrations\202004100244583_Ver_1.3.designer.cs">
+      <DependentUpon>202004100244583_Ver_1.3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NorthwindContext.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Order_Detail.cs" />
@@ -70,6 +84,17 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202004100225247_Ver_1.resx">
+      <DependentUpon>202004100225247_Ver_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004100241585_Ver_1.1.resx">
+      <DependentUpon>202004100241585_Ver_1.1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004100244583_Ver_1.3.resx">
+      <DependentUpon>202004100244583_Ver_1.3.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
