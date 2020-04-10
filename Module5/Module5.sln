@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL.LinqToDb", "DAL.LinqToD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL.LinqToDb.Demonstration", "DAL.LinqToDb.Demonstration\DAL.LinqToDb.Demonstration.csproj", "{6A736FFD-1883-41B3-A103-EC2E1C9A204D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL.EntityFramework", "DAL.EntityFramework\DAL.EntityFramework.csproj", "{B8696200-C43E-4CF3-8A99-2C0EC36E92AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL.EntityFramework.Demonstration", "DAL.EntityFramework.Demonstration\DAL.EntityFramework.Demonstration.csproj", "{FC6A007C-B6FC-42A2-88F3-792A70D40DA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{6A736FFD-1883-41B3-A103-EC2E1C9A204D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A736FFD-1883-41B3-A103-EC2E1C9A204D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A736FFD-1883-41B3-A103-EC2E1C9A204D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8696200-C43E-4CF3-8A99-2C0EC36E92AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8696200-C43E-4CF3-8A99-2C0EC36E92AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8696200-C43E-4CF3-8A99-2C0EC36E92AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8696200-C43E-4CF3-8A99-2C0EC36E92AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC6A007C-B6FC-42A2-88F3-792A70D40DA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC6A007C-B6FC-42A2-88F3-792A70D40DA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC6A007C-B6FC-42A2-88F3-792A70D40DA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC6A007C-B6FC-42A2-88F3-792A70D40DA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
