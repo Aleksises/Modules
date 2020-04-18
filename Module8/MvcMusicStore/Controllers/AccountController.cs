@@ -6,12 +6,15 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using MvcMusicStore.Models;
 using MvcMusicStore.Monitoring;
+using NLog;
 
 namespace MvcMusicStore.Controllers
 {
     [Authorize]
     public class AccountController : Controller
     {
+        private readonly ILogger _logger;
+
         public enum ManageMessageId
         {
             ChangePasswordSuccess,
@@ -32,6 +35,8 @@ namespace MvcMusicStore.Controllers
         public AccountController(UserManager<ApplicationUser> userManager)
         {
             _userManager = userManager;
+            _logger = LogManager.GetLogger("MusicStoreLogger");
+            _logger.Info($"{nameof(AccountController)} created");
         }
 
         private IAuthenticationManager AuthenticationManager
@@ -66,20 +71,26 @@ namespace MvcMusicStore.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
+            _logger.Trace($"{nameof(AccountController)} Login Post method started");
             if (ModelState.IsValid)
             {
                 var user = await _userManager.FindAsync(model.UserName, model.Password);
                 if (user != null)
                 {
+                    _logger.Debug($"Founded user {user.UserName}");
                     await SignInAsync(user, model.RememberMe);
-                    PerformanceCountersMonitor.IncrementLogInCounter();
 
+                    _logger.Debug("Increment Log In Counter");
+                    PerformanceCountersMonitor.IncrementLogInCounter();
+                    
+                    _logger.Trace($"{nameof(AccountController)} Login Post method finished");
                     return RedirectToLocal(returnUrl);
                 }
 
                 ModelState.AddModelError("", "Invalid username or password.");
             }
 
+            _logger.Trace($"{nameof(AccountController)} Login Post method finished");
             return View(model);
         }
 
@@ -319,8 +330,11 @@ namespace MvcMusicStore.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
+            _logger.Trace($"{nameof(AccountController)} Post LogOff method started");
             AuthenticationManager.SignOut();
+            _logger.Debug("Increment Log Off Counter");
             PerformanceCountersMonitor.IncrementLogOffCounter();
+            _logger.Trace($"{nameof(AccountController)} Post LogOff method finished");
             return RedirectToAction("Index", "Home");
         }
 
