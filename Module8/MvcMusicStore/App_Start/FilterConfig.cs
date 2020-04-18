@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using MvcMusicStore.Filters;
+using System.Web;
 using System.Web.Mvc;
 
 namespace MvcMusicStore
@@ -8,6 +9,7 @@ namespace MvcMusicStore
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new ProfileRequestAttribute());
         }
     }
 }

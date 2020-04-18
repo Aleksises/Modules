@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using MvcMusicStore.Models;
+using MvcMusicStore.Monitoring;
 using Owin;
 
 namespace MvcMusicStore
@@ -22,6 +23,7 @@ namespace MvcMusicStore
             }
 
             CreateAdminUser().Wait();
+            PerformanceCountersMonitor.CreateCounterCategory();
         }
 
         private async Task CreateAdminUser()
