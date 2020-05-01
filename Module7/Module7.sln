@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDownloader", "WebDownloader\WebDownloader.csproj", "{C43B2432-2B0E-4D9B-8925-F7B6A26C97D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebDownloader", "WebDownloader\WebDownloader.csproj", "{C43B2432-2B0E-4D9B-8925-F7B6A26C97D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationDemo", "ApplicationDemo\ApplicationDemo.csproj", "{26D7D9C8-AD86-4196-9A2D-DE62AA7CA9EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationDemo", "ApplicationDemo\ApplicationDemo.csproj", "{26D7D9C8-AD86-4196-9A2D-DE62AA7CA9EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportGenerator", "ReportGenerator\ReportGenerator.csproj", "{D4D4B2B9-145A-4332-AB80-5BD100BC3AAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportGeneratorIntegrationTests", "ReportGeneratorIntegrationTests\ReportGeneratorIntegrationTests.csproj", "{EFD2E1D9-FF39-4502-A81B-EB57139F77C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{26D7D9C8-AD86-4196-9A2D-DE62AA7CA9EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26D7D9C8-AD86-4196-9A2D-DE62AA7CA9EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26D7D9C8-AD86-4196-9A2D-DE62AA7CA9EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4D4B2B9-145A-4332-AB80-5BD100BC3AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D4B2B9-145A-4332-AB80-5BD100BC3AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D4B2B9-145A-4332-AB80-5BD100BC3AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D4B2B9-145A-4332-AB80-5BD100BC3AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFD2E1D9-FF39-4502-A81B-EB57139F77C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD2E1D9-FF39-4502-A81B-EB57139F77C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD2E1D9-FF39-4502-A81B-EB57139F77C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD2E1D9-FF39-4502-A81B-EB57139F77C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
