@@ -31,7 +31,7 @@ namespace ReportGenerator.OrdersRetriever
                     {
                         CustomerId = reader.GetString(0),
                         OrderDate = reader.GetDateTime(1),
-                        Freight = reader.GetDouble(2),
+                        Freight = reader.GetDecimal(2),
                         ShipName = reader.GetString(3),
                         ShipCountry = reader.GetString(4)
                     });
