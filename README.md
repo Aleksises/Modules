@@ -1,4 +1,4 @@
-# Module 7 (LINQ)
+# Module 6 (LINQ)
 
 ## Testing
 - Run application and check results.
