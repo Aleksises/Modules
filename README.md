@@ -9,4 +9,5 @@ All required stuff you can find by the following path ./MvcMusicStore/logs
 
 ### Testing Task 3
 * Run **Powershell** as **Administrator** and execute in ./logs **GenerateReport.ps1**. If a notification about changing policy appears you should enter **A**;
+* If problems appear when running script, you can copy all commands and run directly by **Powershell**
 * Open generated **Report.csv** file;
