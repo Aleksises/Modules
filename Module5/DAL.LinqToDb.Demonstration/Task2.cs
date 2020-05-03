@@ -64,10 +64,10 @@ namespace DAL.LinqToDb.Demonstration
                         from z in zl.DefaultIfEmpty()
                         join e in _connection.Employees on z.EmployeeId equals e.EmployeeId into dl
                         from d in dl.DefaultIfEmpty()
-                        select new { Region = r, d.EmployeeId };
+                        select new { r.RegionDescription, d.EmployeeId };
             var result = from row in query.Distinct()
-                         group row by row.Region into ger
-                         select new { RegionDescription = ger.Key.RegionDescription, EmployeesCount = ger.Count(e => e.EmployeeId != 0) };
+                         group row by row.RegionDescription into ger
+                         select new { RegionDescription = ger.Key, EmployeesCount = ger.Count(e => e.EmployeeId != 0) };
 
             foreach (var record in result.ToList())
             {
