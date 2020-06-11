@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "NETCoreApp": {
+      "commandName": "Project",
+      "commandLineArgs": "-UserName"
+    }
+  }
+}
